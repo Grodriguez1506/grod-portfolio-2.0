@@ -1,0 +1,213 @@
+:root{
+    --colorFondoPrincipal: #fafafa;
+    --colorTarjetasPrincipal: white;
+    --colorTitulosPrincipal: #4320ef;
+    --colorTextoSecundario: #222222;
+    --fuente-titulos: "Exo 2";
+    --fuente-letras: "Comfortaa";
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--colorFondoPrincipal);
+    margin: 0px;
+    padding: 0px;
+}
+
+#header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--colorTarjetasPrincipal);
+    padding: 10px;
+    box-shadow: 0px 0px 8px #ccc;
+    position: fixed;
+    top: 0%;
+    z-index: 998;
+}
+
+#logo{
+    flex-basis: 17%;
+    text-decoration: none;
+    font-family: var(--fuente-titulos);
+    color: var(--colorTitulosPrincipal);
+    font-size: 45px;
+    font-weight: bold;
+    text-shadow: 0px 0px 0px white,
+                 1px 1px 1px white,
+                 2px 2px 2px black,
+                 3px 3px 3px black;
+    transition: all 300ms;
+}
+
+#logo:hover{
+    transform: scale(1.05);
+}
+
+#logo:visited{
+    color: var(--colorTitulosPrincipal);
+}
+
+.menu{
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 25px;
+}
+
+ul > li{
+    list-style: none;
+}
+
+ul > li > a{
+    text-decoration: none;
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    transition: all 300ms;
+}
+
+ul > li > a:visited{
+    color: var(--colorTitulosPrincipal);
+}
+
+ul > li > a:hover{
+    transform: scale(1.15);
+}
+
+#switch_container{
+    width: 60px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.556);
+    position: fixed;
+    z-index: 998;
+    top: 12%;
+    right: 1%;
+    border-radius: 999px;
+    box-shadow: 0px 0px 3px #2e3e7b;
+    cursor: pointer;
+}
+
+#dark_switch{
+    width: 25px;
+    height: 25px;
+    background-color: var(--colorTarjetasPrincipal);
+    border-radius: 999px;
+    margin: 2px;
+    margin-left: 4px;
+    box-shadow: 0px 0px 3px #2e3e7b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms;
+}
+
+#dark_switch svg:last-child{
+    display: none;
+}
+
+.desplazar_switch{
+    transform: translateX(27px);
+}
+
+.restablecer_switch{
+    transform: translateX(0px);
+}
+
+.dark_mode{
+    --colorFondoPrincipal: #1c1c1c;
+    --colorTarjetasPrincipal: #131314;
+    --colorTitulosPrincipal: #fafafa;
+    --colorTextoSecundario: white;
+}
+
+.dark_mode #dark_switch svg:last-child{
+    display: block;
+}
+
+.dark_mode #dark_switch svg:first-child{
+    display: none;
+}
+
+.dark_mode #header{
+    box-shadow: none;
+}
+
+.dark_mode section{
+    box-shadow: none;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px auto;
+    margin-top: 100px;
+    min-height: 1200px;
+}
+
+
+.presentacion{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 620px;
+    background-color: var(--colorTarjetasPrincipal);
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.presentacion > span{
+    font-family: var(--fuente-titulos);
+    font-size: 90px;
+    margin-right: 15px;
+    margin-top: 160px;
+    color: var(--colorTitulosPrincipal);
+    text-shadow: 0px 0px 0px white,
+                 1px 1px 1px white,
+                 2px 2px 2px black,
+                 3px 3px 3px black,
+                 4px 4px 4px black,
+                 5px 5px 5px black;
+    transition: all 500ms;
+}
+
+#review{
+    flex-basis: 49%;
+    padding: 10px;
+    padding-left: 30px;
+    font-family: var(--fuente-letras);
+    font-size: 20px;
+    color: var(--colorTextoSecundario);
+    transition: all 300ms;
+}
+
+#icon{
+    flex-basis: 30%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon > img{
+    width: 250px;
+    height: 250px;
+    transition: all 500ms;
+}
