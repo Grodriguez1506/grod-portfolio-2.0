@@ -74,6 +74,7 @@ ul > li > a{
     font-size: 18px;
     display: block;
     transition: all 300ms;
+    color: var(--colorTitulosPrincipal);
 }
 
 ul > li > a:visited{
