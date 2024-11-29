@@ -11,6 +11,8 @@ window.addEventListener('load', function(){
     var darkModeSwitch = this.document.querySelector('#dark_switch');
     var svg_icon = this.document.getElementsByClassName('svg_icon');
     var body = this.document.querySelector('body')
+    var skillsCard = this.document.querySelector('.skills');
+    var skillsImages = this.document.querySelectorAll('.skills img');
 
     function activarDarkMode(){
         darkModeSwitch.classList.remove('restablecer_switch');
@@ -46,10 +48,10 @@ window.addEventListener('load', function(){
         };
 
         var rutaLogo = logo.getAttribute('src');
-        if(rutaLogo == './LOGO.png'){
-            logo.setAttribute('src','./LOGO_DARK_MODE.png')
+        if(rutaLogo == './images/LOGO.png'){
+            logo.setAttribute('src','./images/LOGO_DARK_MODE.png')
         }else{
-            logo.setAttribute('src','./LOGO.png')
+            logo.setAttribute('src','./images/LOGO.png')
         };
         
     });
@@ -62,13 +64,33 @@ window.addEventListener('load', function(){
         lastName.style.transform = 'translateX('+scroll*7+'px)';
         second_lastName.style.transform = 'translateX('+scroll*-12+'px)';
         review.style.transform = 'translateY('+scroll*1.4+'px)'
+
         if(scroll == 0){
             logo.style.opacity = '1';
         }else{
             logo.style.opacity = '0';
         };
+
+        console.log(scroll);
+
+        if (scroll >= 460){
+            skillsCard.style.transform = 'translateX(0px)';
+            var index;
+            for (index in skillsImages){
+                skillsImages[index].style.opacity = 1;
+            };
+        } else if(scroll <= 460){
+            skillsCard.style.transform = 'translateX(-2000px)';
+            var index;
+            for (index in skillsImages){
+                skillsImages[index].style.opacity = 1;
+            };
+        }
+        
+
     });
 
 
-})
+
+});
 

@@ -151,19 +151,20 @@ ul > li > a:hover{
 .content{
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
     margin: 0px auto;
     margin-top: 100px;
     min-height: 1200px;
 }
 
-
-.presentacion{
+section{
     width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     flex-wrap: wrap;
     height: 620px;
     background-color: var(--colorTarjetasPrincipal);
@@ -211,4 +212,15 @@ ul > li > a:hover{
     width: 250px;
     height: 250px;
     transition: all 500ms;
+}
+
+.skills{
+    transform: translateX(-2000px);
+    transition: all 800ms;
+}
+
+.skills > img{
+    width: 150px;
+    opacity: 0;
+    transition: all 3000ms;
 }
