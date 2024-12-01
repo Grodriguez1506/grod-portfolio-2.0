@@ -417,7 +417,7 @@ section{
 .bx{
     font-size: 50px;
     color: var(--colorTextoSecundario);
-    transition: all 800ms;
+    transition: all 500ms;
 }
 
 .bx:hover{
