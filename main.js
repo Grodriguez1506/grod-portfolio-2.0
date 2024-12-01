@@ -13,6 +13,13 @@ window.addEventListener('load', function(){
     var body = this.document.querySelector('body')
     var skillsCard = this.document.querySelector('.skills');
     var skillsImages = this.document.querySelectorAll('.skills img');
+    var pythonBar = this.document.querySelector('.python-skill');
+    var djangoBar = this.document.querySelector('.django-skill');
+    var javascriptBar = this.document.querySelector('.javascript-skill');
+    var htmlBar = this.document.querySelector('.html-skill');
+    var cssBar = this.document.querySelector('.css-skill');
+
+    // FUNCION PARA ACTIVAR EL MODO OSCURO
 
     function activarDarkMode(){
         darkModeSwitch.classList.remove('restablecer_switch');
@@ -20,11 +27,15 @@ window.addEventListener('load', function(){
         body.classList.add('dark_mode');
     };
     
+    // FUNCION PARA ACTIVAR EL MODO CLARO
+
     function activarLightMode(){
         darkModeSwitch.classList.remove('desplazar_switch');
         darkModeSwitch.classList.add('restablecer_switch');
         body.classList.remove('dark_mode');
     };
+
+    // EVENTO QUE DISPARA EL MODO OSCURO / CLARO
 
     containerSwitch.addEventListener('click', function(){
         var index;
@@ -56,8 +67,26 @@ window.addEventListener('load', function(){
         
     });
 
+    // FUNCION PARA INCREMENTAR LAS BARRAS DE PROGRESO DE LAS HABILIDADES
+
+    function skillUp(skill, percentage){
+        for(var i = 0; i <= percentage; i++){
+            skill.style.width = i+'%';
+        };
+    };
+
+    // FUNCION PARA DISMUNUIR LAS BARRAS DE PROGRESO DE LAS HABILIDADES
+
+    function skillDown(skill){
+        skill.style.width = '0%'
+    };
+
+    // EVENTO SCROLL MEDIANTE EL CUAL SE MUESTRAN LAS TARJETAS DEPENDIENDO DE LA UBICACION DEL SCROLL DE LA PAGINA
+
     window.addEventListener('scroll',function(){
         var scroll = window.scrollY;
+        
+        // EFECTO DE LOS NOMBRES DE LA TARJETA DE PRESENTACION, RESEÑA Y EL LOGO DEL ZORRO
 
         firstName.style.transform = 'translateY('+scroll*-3+'px)';
         secondName.style.transform = 'translateY('+scroll*3+'px)';
@@ -71,26 +100,45 @@ window.addEventListener('load', function(){
             logo.style.opacity = '0';
         };
 
-        console.log(scroll);
+        // EFECTO DE DESPLAZAMIENTO DE LA TARJETA DE HABILIDADES E INCREMENTO Y DECREMENTO 
+        // DE LAS BARRAS DE PROGRESO DE LAS HABILIDADES
 
-        if (scroll >= 460){
+        if (scroll >= 460 && scroll < 1050){
             skillsCard.style.transform = 'translateX(0px)';
-            var index;
-            for (index in skillsImages){
-                skillsImages[index].style.opacity = 1;
-            };
+            skillsImages.forEach(image => {
+                image.style.opacity = 1;
+                skillUp(pythonBar, 85);
+                skillUp(djangoBar, 79);
+                skillUp(javascriptBar, 72);
+                skillUp(htmlBar, 90);
+                skillUp(cssBar, 87);
+            });
         } else if(scroll <= 460){
             skillsCard.style.transform = 'translateX(-2000px)';
-            var index;
-            for (index in skillsImages){
-                skillsImages[index].style.opacity = 1;
-            };
+            skillsImages.forEach(image => {
+                image.style.opacity = 0;
+                skillDown(pythonBar);
+                skillDown(djangoBar);
+                skillDown(javascriptBar);
+                skillDown(htmlBar);
+                skillDown(cssBar);
+            });
+        } else if(scroll > 1050){
+            skillsCard.style.transform = 'translateX(2000px)';
+            skillsImages.forEach(image => {
+                image.style.opacity = 0;
+                skillDown(pythonBar);
+                skillDown(djangoBar);
+                skillDown(javascriptBar);
+                skillDown(htmlBar);
+                skillDown(cssBar);
+            });
         }
         
 
     });
 
-
+    
 
 });
 
