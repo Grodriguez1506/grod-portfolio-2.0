@@ -125,7 +125,7 @@ window.addEventListener('load', function(){
                 skillDown(cssBar);
             });
         } else if(scroll > 1050){
-            skillsCard.style.transform = 'translateX(2000px)';
+            skillsCard.style.transform = 'translateX(-2000px)';
             skillsImages.forEach(image => {
                 image.style.opacity = 0;
                 skillDown(pythonBar);
@@ -136,9 +136,9 @@ window.addEventListener('load', function(){
             });
         }
 
-        if(scroll >= 1000 && scroll < 1750){
+        if(scroll >= 1150 && scroll < 1750){
             projectsCard.style.opacity = '1';
-        }else if(scroll < 1000){
+        }else if(scroll < 1150){
             projectsCard.style.opacity = '0';
         }else if(scroll > 1750){
             projectsCard.style.opacity = '0';
