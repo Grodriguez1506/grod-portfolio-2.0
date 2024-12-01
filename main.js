@@ -18,6 +18,7 @@ window.addEventListener('load', function(){
     var javascriptBar = this.document.querySelector('.javascript-skill');
     var htmlBar = this.document.querySelector('.html-skill');
     var cssBar = this.document.querySelector('.css-skill');
+    var projectsCard = this.document.querySelector('.projects');
 
     // FUNCION PARA ACTIVAR EL MODO OSCURO
 
@@ -134,7 +135,14 @@ window.addEventListener('load', function(){
                 skillDown(cssBar);
             });
         }
-        
+
+        if(scroll >= 1000 && scroll < 1750){
+            projectsCard.style.opacity = '1';
+        }else if(scroll < 1000){
+            projectsCard.style.opacity = '0';
+        }else if(scroll > 1750){
+            projectsCard.style.opacity = '0';
+        }
 
     });
 

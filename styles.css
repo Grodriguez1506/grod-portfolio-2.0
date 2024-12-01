@@ -34,6 +34,7 @@ body{
     position: fixed;
     top: 0%;
     z-index: 998;
+    transition: all 500ms;
 }
 
 #logo{
@@ -162,6 +163,19 @@ ul > li > a:hover{
     margin-top: 100px;
     min-height: 1200px;
     overflow: hidden;
+    transition: all 500ms;
+}
+
+.subtitulo{
+    font-family: var(--fuente-titulos) !important;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--colorTitulosPrincipal);
+    text-shadow: 0px 0px 0px white,
+                 1px 1px 1px white,
+                 2px 2px 2px black,
+                 3px 3px 3px black;
+
 }
 
 section{
@@ -177,6 +191,7 @@ section{
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 25px;
+    padding: 20px;
     transition: all 500ms;
 }
 
@@ -226,8 +241,14 @@ section{
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    padding: 20px;
+    overflow-y: scroll;
     transform: translateX(-2000px);
+}
+
+.subtitulo_skills{
+    margin: 0px;
+    text-align: center;
+    flex-basis: 100%;
 }
 
 
@@ -274,4 +295,175 @@ section{
     text-align: center;
     padding-top: 12px;
     transition: all 5s;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 50px;
+    overflow-y: scroll;
+    opacity: 0;
+}
+
+.subtitulo_projects{
+    margin: 0px;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.individual_project{
+    flex-basis: 30%;
+    height: 400px;
+    background-color: var(--colorTarjetasPrincipal);
+    box-shadow: 0px 0px 8px #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 500ms;
+    text-align: center;
+}
+
+.dark_mode .individual_project{
+    box-shadow: 0px 0px 8px black;
+}
+
+.individual_project:hover{
+    box-shadow: 0px 0px 8px black;
+}
+
+.project_picture{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+
+.project_picture > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project_title{
+    font-family: var(--fuente-titulos);
+    color: var(--colorTitulosPrincipal);
+    font-size: 28px;
+    text-align: center;
+    margin: 0px;
+}
+
+.project_review{
+    text-align: justify;
+    font-family: var(--fuente-letras);
+    color: var(--colorTextoSecundario);
+    padding: 10px;
+    margin: 0px;
+}
+
+.material-icons{
+    font-size: 30px !important;
+    text-decoration: none;
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+.material-icons:visited{
+    color: var(--colorTextoSecundario);
+}
+
+.material-icons:hover{
+    transform: rotate(-40deg);
+}
+
+.contact_section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/background_picture.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 50px;
+    box-shadow: none;
+    margin: 0px;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.dark_mode .contact_section{
+    background: url(./images/background_dark_mode.jpg);
+    background-repeat: no-repeat;
+    background-position-y: -2585px;
+    background-position-x: -3312px;
+}
+
+.datos_redes{
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#subtitulo_contact{
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 0px;
+}
+
+
+.bx{
+    font-size: 50px;
+    color: var(--colorTextoSecundario);
+    transition: all 800ms;
+}
+
+.bx:hover{
+    color: white;
+    text-shadow: 0px 0px 1px #4320ef,
+                 0px 0px 2px #4320ef,
+                 0px 0px 3px #4320ef,
+                 0px 0px 4px #4320ef,
+                 0px 0px 5px #4320ef,
+                 0px 0px 6px #4320ef,
+                 0px 0px 7px #4320ef,
+                 0px 0px 8px #4320ef,
+                 0px 0px 9px #4320ef,
+                 0px 0px 10px #4320ef,
+                 0px 0px 11px #4320ef,
+                 0px 0px 12px #4320ef,
+                 0px 0px 13px #4320ef,
+                 0px 0px 14px #4320ef,
+                 0px 0px 15px #4320ef,
+                 0px 0px 16px #4320ef,
+                 0px 0px 17px #4320ef,
+                 0px 0px 18px #4320ef,
+                 0px 0px 19px #4320ef,
+                 0px 0px 20px #4320ef;
+}
+
+.bx:visited{
+    color: var(--colorTextoSecundario);
+}
+
+
+.profilepicture{
+    flex-basis:50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilepicture > img{
+    width: 500px;
+    filter: drop-shadow(0px 0px 15px gray);
+    transform: translateY(113px) translateX(141px);
+}
+
+.dark_mode .profilepicture > img{
+    filter: none;
 }
