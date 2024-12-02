@@ -89,17 +89,17 @@ window.addEventListener('load', function(){
         
         // EFECTO DE LOS NOMBRES DE LA TARJETA DE PRESENTACION, RESEÑA Y EL LOGO DEL ZORRO
 
-        firstName.style.transform = 'translateY('+scroll*-3+'px)';
-        secondName.style.transform = 'translateY('+scroll*3+'px)';
-        lastName.style.transform = 'translateX('+scroll*7+'px)';
-        second_lastName.style.transform = 'translateX('+scroll*-12+'px)';
-        review.style.transform = 'translateY('+scroll*1.4+'px)'
+        // firstName.style.transform = 'translateY('+scroll*-3+'px)';
+        // secondName.style.transform = 'translateY('+scroll*3+'px)';
+        // lastName.style.transform = 'translateX('+scroll*7+'px)';
+        // second_lastName.style.transform = 'translateX('+scroll*-12+'px)';
+        // review.style.transform = 'translateY('+scroll*1.4+'px)'
 
-        if(scroll == 0){
-            logo.style.opacity = '1';
-        }else{
-            logo.style.opacity = '0';
-        };
+        // if(scroll == 0){
+        //     logo.style.opacity = '1';
+        // }else{
+        //     logo.style.opacity = '0';
+        // };
 
         // EFECTO DE DESPLAZAMIENTO DE LA TARJETA DE HABILIDADES E INCREMENTO Y DECREMENTO 
         // DE LAS BARRAS DE PROGRESO DE LAS HABILIDADES
@@ -114,7 +114,7 @@ window.addEventListener('load', function(){
                 skillUp(htmlBar, 90);
                 skillUp(cssBar, 87);
             });
-        } else if(scroll <= 460){
+        }else if(scroll <= 460){
             skillsCard.style.transform = 'translateX(-2000px)';
             skillsImages.forEach(image => {
                 image.style.opacity = 0;
@@ -138,11 +138,12 @@ window.addEventListener('load', function(){
 
         if(scroll >= 1150 && scroll < 1750){
             projectsCard.style.opacity = '1';
-        }else if(scroll < 1150){
-            projectsCard.style.opacity = '0';
-        }else if(scroll > 1750){
-            projectsCard.style.opacity = '0';
         }
+        // else if(scroll < 1150){
+        //     projectsCard.style.opacity = '0';
+        // }else if(scroll > 1750){
+        //     projectsCard.style.opacity = '0';
+        // }
 
     });
 

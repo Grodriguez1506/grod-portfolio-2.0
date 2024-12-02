@@ -161,6 +161,7 @@ ul > li > a:hover{
     gap: 50px;
     margin: 0px auto;
     margin-top: 100px;
+    padding-top: 10px;
     min-height: 1200px;
     overflow: hidden;
     transition: all 500ms;
@@ -196,6 +197,8 @@ section{
 }
 
 .presentacion > span{
+    flex-basis: 20%;
+    text-align: center;
     font-family: var(--fuente-titulos);
     font-size: 90px;
     margin-right: 15px;
@@ -303,7 +306,7 @@ section{
     flex-direction: row;
     justify-content: space-evenly;
     gap: 50px;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     opacity: 0;
 }
 
@@ -468,3 +471,251 @@ section{
 .dark_mode .profilepicture > img{
     filter: none;
 }
+
+/* RESPONSIVE WEB DESIGN */
+
+@media(max-width: 1476px) {
+    .presentacion > span {
+        font-size: 70px;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 1270px) {
+    .profilepicture > img {
+        transform: translateY(113px) translateX(77px);
+    }
+}
+
+@media(max-width: 1175px) {
+    .presentacion > span {
+    flex-basis: 35%;
+    margin-right: 0px;
+    }
+}
+
+@media(max-width: 1095px) {
+
+    .individual_project {
+        flex-basis: 45%;
+    }
+
+    .datos_redes {
+        flex-basis: 40%;
+    }
+
+    .profilepicture {
+        flex-basis: 30%;
+    }
+
+    .profilepicture > img {
+        width: 370px;
+        border-radius: 999px;
+    }
+
+    #subtitulo_contact {
+        font-size: 56px;
+    }
+
+    .bx {
+        font-size: 40px;
+    }
+
+    .datos_redes > .subtitulo {
+        font-size: 30px;
+    }
+    
+}
+
+@media(max-width: 937px) {
+    #review {
+        flex-basis: 60%;
+        font-size: 15px;
+    }
+
+    #icon > img {
+        flex-basis: 30%;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 830px) {
+
+    #header {
+        height: 135px;
+        flex-direction: column;
+    }
+
+    #logo {
+        flex-basis: 100%;
+    }
+    .content {
+        margin-top: 162px;
+    }
+
+    .menu {
+        flex-basis: 100%;
+    }
+    
+    #second_name{
+        display: none;
+    }
+
+    #second_last_name{
+        display: none;
+    }
+
+    .project_review {
+        font-size: 14px;
+    }
+
+    .project_title {
+        font-size: 22px;
+    }
+
+    .profilepicture > img {
+        width: 300px;
+        transform: translateY(-5px) translateX(77px);
+    }
+
+    .presentacion > span {
+        flex-basis: 100%;
+    }
+    
+    #second_name{
+        display: none;
+    }
+
+    #second_last_name{
+        display: none;
+    }
+
+    #subtitulo_contact {
+        font-size: 46px;
+    }
+
+}
+
+@media(max-width: 770px) {
+
+    .individual_project {
+        flex-basis: 80%;
+    }
+
+    .datos_redes {
+        flex-basis: 56%;
+    }
+
+    .profilepicture > img {
+        width: 250px;
+        transform: translateY(-5px);
+    }
+
+
+}
+
+@media(max-width: 610px) {
+
+    .datos_redes {
+        flex-basis: 100%;
+    }
+
+    .profilepicture {
+        display: none;
+    }
+
+
+}
+
+@media(max-width: 569px ) {
+
+    #review {
+        flex-basis: 50%;
+        font-size: 14px;
+    }
+
+    #icon > img {
+        flex-basis: 30%;
+        width: 150px;
+        height: 150px;
+    }
+    
+    #switch_container {
+        top: 21.4%;
+    }
+}
+
+@media(max-width: 516px ) {
+
+    #review {
+        font-size: 12px;
+    }
+
+    #icon > img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 10px;
+        padding: 0px;
+    }
+
+    ul > li > a {
+        font-size: 15px;
+    }
+
+    .skills > .icons {
+    flex-basis: 35%;
+    }
+
+    .loaders {
+    flex-basis: 65%;
+    }
+
+
+}
+
+@media(max-width: 440px ) {
+
+    #review {
+        flex-basis: 100%;
+    }
+}
+
+@media(max-width: 385px ) {
+
+    .presentacion > span {
+        font-size: 50px;
+    }
+
+    .skills > .icons > img {
+        width: 70px;
+        margin-bottom: 35px;
+    }
+
+    .loaders {
+        flex-basis: 65%;
+        margin-bottom: 26px;
+    }
+
+    .project_title {
+        font-size: 19px;
+    }
+
+    .project_review {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 385px ) {
+
+    .datos_redes > .subtitulo {
+        font-size: 26px;
+    }
+}
+
+
+
