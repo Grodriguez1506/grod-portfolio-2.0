@@ -139,11 +139,11 @@ window.addEventListener('load', function(){
         if(scroll >= 1150 && scroll < 1750){
             projectsCard.style.opacity = '1';
         }
-        // else if(scroll < 1150){
-        //     projectsCard.style.opacity = '0';
-        // }else if(scroll > 1750){
-        //     projectsCard.style.opacity = '0';
-        // }
+        else if(scroll < 1150){
+            projectsCard.style.opacity = '0';
+        }else if(scroll > 1750){
+            projectsCard.style.opacity = '0';
+        }
 
     });
 
