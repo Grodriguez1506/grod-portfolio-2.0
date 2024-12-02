@@ -89,17 +89,17 @@ window.addEventListener('load', function(){
         
         // EFECTO DE LOS NOMBRES DE LA TARJETA DE PRESENTACION, RESEÑA Y EL LOGO DEL ZORRO
 
-        // firstName.style.transform = 'translateY('+scroll*-3+'px)';
-        // secondName.style.transform = 'translateY('+scroll*3+'px)';
-        // lastName.style.transform = 'translateX('+scroll*7+'px)';
-        // second_lastName.style.transform = 'translateX('+scroll*-12+'px)';
-        // review.style.transform = 'translateY('+scroll*1.4+'px)'
+        firstName.style.transform = 'translateY('+scroll*-3+'px)';
+        secondName.style.transform = 'translateY('+scroll*3+'px)';
+        lastName.style.transform = 'translateX('+scroll*7+'px)';
+        second_lastName.style.transform = 'translateX('+scroll*-12+'px)';
+        review.style.transform = 'translateY('+scroll*1.4+'px)'
 
-        // if(scroll == 0){
-        //     logo.style.opacity = '1';
-        // }else{
-        //     logo.style.opacity = '0';
-        // };
+        if(scroll == 0){
+            logo.style.opacity = '1';
+        }else{
+            logo.style.opacity = '0';
+        };
 
         // EFECTO DE DESPLAZAMIENTO DE LA TARJETA DE HABILIDADES E INCREMENTO Y DECREMENTO 
         // DE LAS BARRAS DE PROGRESO DE LAS HABILIDADES
