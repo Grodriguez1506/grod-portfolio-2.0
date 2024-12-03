@@ -1,5 +1,4 @@
 'use strict'
-
 window.addEventListener('load', function(){
     var firstName = this.document.querySelector('#first_name');
     var secondName = this.document.querySelector('#second_name');
@@ -20,6 +19,7 @@ window.addEventListener('load', function(){
     var cssBar = this.document.querySelector('.css-skill');
     var projectsCard = this.document.querySelector('.projects');
 
+    
     // FUNCION PARA ACTIVAR EL MODO OSCURO
 
     function activarDarkMode(){
@@ -101,7 +101,7 @@ window.addEventListener('load', function(){
             projectsCard.style.opacity = '1';
         }else{
             // EFECTO DE LOS NOMBRES DE LA TARJETA DE PRESENTACION, RESEÑA Y EL LOGO DEL ZORRO
-
+            
             firstName.style.transform = 'translateY('+scroll*-3+'px)';
             secondName.style.transform = 'translateY('+scroll*3+'px)';
             lastName.style.transform = 'translateX('+scroll*7+'px)';
@@ -117,7 +117,7 @@ window.addEventListener('load', function(){
             // EFECTO DE DESPLAZAMIENTO DE LA TARJETA DE HABILIDADES E INCREMENTO Y DECREMENTO 
             // DE LAS BARRAS DE PROGRESO DE LAS HABILIDADES
 
-            if (scroll >= 460 && scroll < 1050){
+            if (scroll >= 460 && scroll <= 1086){
                 skillsCard.style.transform = 'translateX(0px)';
                 skillsImages.forEach(image => {
                     image.style.opacity = 1;
@@ -137,7 +137,7 @@ window.addEventListener('load', function(){
                     skillDown(htmlBar);
                     skillDown(cssBar);
                 });
-            } else if(scroll > 1050){
+            } else if(scroll > 1086){
                 skillsCard.style.transform = 'translateX(-2000px)';
                 skillsImages.forEach(image => {
                     image.style.opacity = 0;
@@ -149,10 +149,10 @@ window.addEventListener('load', function(){
                 });
             }
 
-            if(scroll >= 1050 && scroll < 1950){
+            if(scroll >= 1086 && scroll < 1950){
                 projectsCard.style.opacity = '1';
             }
-            else if(scroll < 1050){
+            else if(scroll < 1086){
                 projectsCard.style.opacity = '0';
             }else if(scroll > 1950){
                 projectsCard.style.opacity = '0';
