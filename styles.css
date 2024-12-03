@@ -381,6 +381,7 @@ section{
 
 .contact_section{
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -714,6 +715,23 @@ section{
 
     .datos_redes > .subtitulo {
         font-size: 26px;
+    }
+}
+
+@media (max-height: 370px ) {
+    #header {
+        height: 111px;
+    }
+    #logo {
+        font-size: 38px;
+    }
+
+    ul > li > a {
+        font-size: 15px;
+    }
+    
+    .content {
+        margin-top: 115px;
     }
 }
 

@@ -136,14 +136,16 @@ window.addEventListener('load', function(){
             });
         }
 
-        if(scroll >= 1150 && scroll < 1750){
+        if(scroll >= 1050 && scroll < 1950){
             projectsCard.style.opacity = '1';
         }
-        else if(scroll < 1150){
+        else if(scroll < 1050){
             projectsCard.style.opacity = '0';
-        }else if(scroll > 1750){
+        }else if(scroll > 1950){
             projectsCard.style.opacity = '0';
         }
+
+        console.log(scroll)
 
     });
 
