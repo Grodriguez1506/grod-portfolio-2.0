@@ -102,6 +102,8 @@ window.addEventListener('load', function(){
                 skillUp(mysqlBar, 50);
             });
             projectsCard.style.opacity = '1';
+            experiencesCard.style.transform = 'translateX(0px)'
+            experiencesCard.style.opacity = '1';
         }else{
             // EFECTO DE LOS NOMBRES DE LA TARJETA DE PRESENTACION, RESEÑA Y EL LOGO DEL ZORRO
             
