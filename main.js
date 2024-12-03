@@ -88,7 +88,7 @@ window.addEventListener('load', function(){
         var scroll = this.window.scrollY;
         var height = this.window.innerHeight;
         
-        if (height < 750){
+        if (height < 700){
             skillsCard.style.transform = 'translateX(0px)';
             skillsImages.forEach(image => {
                 image.style.opacity = 1;
