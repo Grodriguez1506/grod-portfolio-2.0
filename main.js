@@ -85,26 +85,10 @@ window.addEventListener('load', function(){
     // EVENTO SCROLL MEDIANTE EL CUAL SE MUESTRAN LAS TARJETAS DEPENDIENDO DE LA UBICACION DEL SCROLL DE LA PAGINA
 
     window.addEventListener('scroll',function(){
-        var scroll = window.scrollY;
+        var scroll = this.window.scrollY;
+        var height = this.window.innerHeight;
         
-        // EFECTO DE LOS NOMBRES DE LA TARJETA DE PRESENTACION, RESEÑA Y EL LOGO DEL ZORRO
-
-        firstName.style.transform = 'translateY('+scroll*-3+'px)';
-        secondName.style.transform = 'translateY('+scroll*3+'px)';
-        lastName.style.transform = 'translateX('+scroll*7+'px)';
-        second_lastName.style.transform = 'translateX('+scroll*-12+'px)';
-        review.style.transform = 'translateY('+scroll*1.4+'px)'
-
-        if(scroll == 0){
-            logo.style.opacity = '1';
-        }else{
-            logo.style.opacity = '0';
-        };
-
-        // EFECTO DE DESPLAZAMIENTO DE LA TARJETA DE HABILIDADES E INCREMENTO Y DECREMENTO 
-        // DE LAS BARRAS DE PROGRESO DE LAS HABILIDADES
-
-        if (scroll >= 460 && scroll < 1050){
+        if (height < 750){
             skillsCard.style.transform = 'translateX(0px)';
             skillsImages.forEach(image => {
                 image.style.opacity = 1;
@@ -114,38 +98,68 @@ window.addEventListener('load', function(){
                 skillUp(htmlBar, 90);
                 skillUp(cssBar, 87);
             });
-        }else if(scroll <= 460){
-            skillsCard.style.transform = 'translateX(-2000px)';
-            skillsImages.forEach(image => {
-                image.style.opacity = 0;
-                skillDown(pythonBar);
-                skillDown(djangoBar);
-                skillDown(javascriptBar);
-                skillDown(htmlBar);
-                skillDown(cssBar);
-            });
-        } else if(scroll > 1050){
-            skillsCard.style.transform = 'translateX(-2000px)';
-            skillsImages.forEach(image => {
-                image.style.opacity = 0;
-                skillDown(pythonBar);
-                skillDown(djangoBar);
-                skillDown(javascriptBar);
-                skillDown(htmlBar);
-                skillDown(cssBar);
-            });
-        }
-
-        if(scroll >= 1050 && scroll < 1950){
             projectsCard.style.opacity = '1';
-        }
-        else if(scroll < 1050){
-            projectsCard.style.opacity = '0';
-        }else if(scroll > 1950){
-            projectsCard.style.opacity = '0';
-        }
+        }else{
+            // EFECTO DE LOS NOMBRES DE LA TARJETA DE PRESENTACION, RESEÑA Y EL LOGO DEL ZORRO
 
-        console.log(scroll)
+            firstName.style.transform = 'translateY('+scroll*-3+'px)';
+            secondName.style.transform = 'translateY('+scroll*3+'px)';
+            lastName.style.transform = 'translateX('+scroll*7+'px)';
+            second_lastName.style.transform = 'translateX('+scroll*-12+'px)';
+            review.style.transform = 'translateY('+scroll*1.4+'px)'
+
+            if(scroll == 0){
+                logo.style.opacity = '1';
+            }else{
+                logo.style.opacity = '0';
+            };
+
+            // EFECTO DE DESPLAZAMIENTO DE LA TARJETA DE HABILIDADES E INCREMENTO Y DECREMENTO 
+            // DE LAS BARRAS DE PROGRESO DE LAS HABILIDADES
+
+            if (scroll >= 460 && scroll < 1050){
+                skillsCard.style.transform = 'translateX(0px)';
+                skillsImages.forEach(image => {
+                    image.style.opacity = 1;
+                    skillUp(pythonBar, 85);
+                    skillUp(djangoBar, 79);
+                    skillUp(javascriptBar, 72);
+                    skillUp(htmlBar, 90);
+                    skillUp(cssBar, 87);
+                });
+            }else if(scroll <= 460){
+                skillsCard.style.transform = 'translateX(-2000px)';
+                skillsImages.forEach(image => {
+                    image.style.opacity = 0;
+                    skillDown(pythonBar);
+                    skillDown(djangoBar);
+                    skillDown(javascriptBar);
+                    skillDown(htmlBar);
+                    skillDown(cssBar);
+                });
+            } else if(scroll > 1050){
+                skillsCard.style.transform = 'translateX(-2000px)';
+                skillsImages.forEach(image => {
+                    image.style.opacity = 0;
+                    skillDown(pythonBar);
+                    skillDown(djangoBar);
+                    skillDown(javascriptBar);
+                    skillDown(htmlBar);
+                    skillDown(cssBar);
+                });
+            }
+
+            if(scroll >= 1050 && scroll < 1950){
+                projectsCard.style.opacity = '1';
+            }
+            else if(scroll < 1050){
+                projectsCard.style.opacity = '0';
+            }else if(scroll > 1950){
+                projectsCard.style.opacity = '0';
+            }
+        }
+        
+        
 
     });
 

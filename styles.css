@@ -488,7 +488,7 @@ section{
     }
 }
 
-@media(max-width: 1175px) {
+@media(max-width: 1181px) {
     .presentacion > span {
     flex-basis: 35%;
     margin-right: 0px;
@@ -686,6 +686,12 @@ section{
     }
 }
 
+@media (max-width: 391px) {
+    .menu {
+        gap: 20px;
+    }
+}
+
 @media(max-width: 385px ) {
 
     .presentacion > span {
@@ -709,10 +715,7 @@ section{
     .project_review {
         font-size: 12px;
     }
-}
-
-@media(max-width: 385px ) {
-
+    
     .datos_redes > .subtitulo {
         font-size: 26px;
     }
