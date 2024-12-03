@@ -17,7 +17,9 @@ window.addEventListener('load', function(){
     var javascriptBar = this.document.querySelector('.javascript-skill');
     var htmlBar = this.document.querySelector('.html-skill');
     var cssBar = this.document.querySelector('.css-skill');
+    var mysqlBar = this.document.querySelector('.mysql-skill');
     var projectsCard = this.document.querySelector('.projects');
+    var experiencesCard = this.document.querySelector('.experiences')
 
     
     // FUNCION PARA ACTIVAR EL MODO OSCURO
@@ -97,6 +99,7 @@ window.addEventListener('load', function(){
                 skillUp(javascriptBar, 72);
                 skillUp(htmlBar, 90);
                 skillUp(cssBar, 87);
+                skillUp(mysqlBar, 50);
             });
             projectsCard.style.opacity = '1';
         }else{
@@ -126,6 +129,7 @@ window.addEventListener('load', function(){
                     skillUp(javascriptBar, 72);
                     skillUp(htmlBar, 90);
                     skillUp(cssBar, 87);
+                    skillUp(mysqlBar, 50);
                 });
             }else if(scroll <= 460){
                 skillsCard.style.transform = 'translateX(-2000px)';
@@ -136,6 +140,7 @@ window.addEventListener('load', function(){
                     skillDown(javascriptBar);
                     skillDown(htmlBar);
                     skillDown(cssBar);
+                    skillDown(mysqlBar);
                 });
             } else if(scroll > 1086){
                 skillsCard.style.transform = 'translateX(-2000px)';
@@ -146,8 +151,9 @@ window.addEventListener('load', function(){
                     skillDown(javascriptBar);
                     skillDown(htmlBar);
                     skillDown(cssBar);
+                    skillDown(mysqlBar);
                 });
-            }
+            };
 
             if(scroll >= 1086 && scroll < 1950){
                 projectsCard.style.opacity = '1';
@@ -156,14 +162,24 @@ window.addEventListener('load', function(){
                 projectsCard.style.opacity = '0';
             }else if(scroll > 1950){
                 projectsCard.style.opacity = '0';
-            }
-        }
-        
-        
+            };
+
+            if(scroll >= 1900 && scroll < 2670){
+                experiencesCard.style.transform = 'translateX(0px)'
+                experiencesCard.style.opacity = '1';
+            }else if(scroll <= 1950){
+                experiencesCard.style.transform = 'translateX(2000px)'
+                experiencesCard.style.opacity = '0';
+            }else if(scroll > 2670){
+                experiencesCard.style.transform = 'translateX(2000px)'
+                experiencesCard.style.opacity = '0';
+            };
+
+        };
+    
 
     });
 
-    
 
 });
 
