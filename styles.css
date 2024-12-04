@@ -251,6 +251,7 @@ section{
 
 .subtitulo_skills{
     margin: 0px;
+    margin-bottom: 25px;
     text-align: center;
     flex-basis: 100%;
 }
@@ -558,6 +559,85 @@ section{
     color: var(--colorTextoSecundario);
 }
 
+
+.certificates{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.certificates .subtitulo{
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0px;
+    transform: translateY(-2000px);
+    transition: all 500ms;
+}
+
+.certificate{
+    flex-basis: 48%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorTarjetasPrincipal);
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px #ccc;
+    transition: all 500ms;
+}
+
+.certificate_first_column{
+    transform: translateX(-2000px);
+    transition: all 500ms;
+}
+
+.certificate_second_column{
+    transform: translateX(-2000px);
+    transition: all 500ms;
+}
+
+.dark_mode .certificate{
+    box-shadow: 0px 0px 15px black;
+}
+
+.certificate > img{
+    width: 40%;
+    height: 100%;
+    border-right: 1px solid #cccccc73;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.certificate_title{
+    display: block;
+    flex-basis: 60%;
+    line-height: 200px;
+    text-decoration: none;
+    font-family: var(--fuente-titulos);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    /* padding-left: 20px; */
+    color: var(--colorTextoSecundario);
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.certificate_title:hover{
+    background-color: #dadada;
+}
+
+.dark_mode .certificate_title:hover{
+    background-color: rgba(0, 0, 0, 0.263);
+}
+
 /* CUSTOM SCROLLBAR */
 
 ::-webkit-scrollbar{
@@ -644,6 +724,15 @@ section{
         flex-basis: 30%;
         width: 200px;
         height: 200px;
+    }
+
+    .certificate > img {
+        width: 30%;
+    }
+
+    .certificate_title {
+        flex-basis: 70%;
+        font-size: 18px;
     }
 }
 
@@ -755,6 +844,10 @@ section{
     #switch_container {
         top: 21.4%;
     }
+
+    .certificate {
+        flex-basis: 100%;
+    }
 }
 
 @media(max-width: 516px ) {
@@ -788,7 +881,7 @@ section{
 }
 
 @media(max-width: 495px){
-    
+
     .datos_redes {
         flex-basis: 90%;
     }
@@ -798,6 +891,10 @@ section{
 
     #review {
         flex-basis: 100%;
+    }
+
+    .subtitulo {
+        font-size: 50px;
     }
 }
 
@@ -811,6 +908,9 @@ section{
 
     .presentacion > span {
         font-size: 50px;
+    }
+    .subtitulo {
+        font-size: 45px;
     }
 
     .skills > .icons > img {

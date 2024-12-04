@@ -19,7 +19,10 @@ window.addEventListener('load', function(){
     var cssBar = this.document.querySelector('.css-skill');
     var mysqlBar = this.document.querySelector('.mysql-skill');
     var projectsCard = this.document.querySelector('.projects');
-    var experiencesCard = this.document.querySelector('.experiences')
+    var experiencesCard = this.document.querySelector('.experiences');
+    var certificatesSubtitle = this.document.querySelector('.certificates .subtitulo')
+    var firstColumnExperience = this.document.querySelectorAll('.certificate_first_column');
+    var secondColumnExperience = this.document.querySelectorAll('.certificate_second_column');
 
     
     // FUNCION PARA ACTIVAR EL MODO OSCURO
@@ -104,6 +107,14 @@ window.addEventListener('load', function(){
             projectsCard.style.opacity = '1';
             experiencesCard.style.transform = 'translateX(0px)'
             experiencesCard.style.opacity = '1';
+
+            certificatesSubtitle.style.transform = 'translateY(0px)';
+            firstColumnExperience.forEach(experience => {
+                experience.style.transform = 'translateX(0px)';
+            });
+            secondColumnExperience.forEach(experience => {
+                experience.style.transform = 'translateX(0px)';
+            });
         }else{
             // EFECTO DE LOS NOMBRES DE LA TARJETA DE PRESENTACION, RESEÑA Y EL LOGO DEL ZORRO
             
@@ -167,15 +178,47 @@ window.addEventListener('load', function(){
             };
 
             if(scroll >= 1900 && scroll < 2670){
-                experiencesCard.style.transform = 'translateX(0px)'
+                experiencesCard.style.transform = 'translateX(0px)';
                 experiencesCard.style.opacity = '1';
-            }else if(scroll <= 1950){
-                experiencesCard.style.transform = 'translateX(2000px)'
+            }else if(scroll <= 1900){
+                experiencesCard.style.transform = 'translateX(2000px)';
                 experiencesCard.style.opacity = '0';
             }else if(scroll > 2670){
-                experiencesCard.style.transform = 'translateX(2000px)'
+                experiencesCard.style.transform = 'translateX(2000px)';
                 experiencesCard.style.opacity = '0';
             };
+
+            if(scroll >= 2700 && scroll < 3300){
+                certificatesSubtitle.style.transform = 'translateY(0px)';
+
+                firstColumnExperience.forEach(experience => {
+                    experience.style.transform = 'translateX(0px)';
+                });
+
+                secondColumnExperience.forEach(experience => {
+                    experience.style.transform = 'translateX(0px)';
+                });
+            }else if(scroll <= 2700){
+                certificatesSubtitle.style.transform = 'translateY(-2000px)';
+
+                firstColumnExperience.forEach(experience => {
+                    experience.style.transform = 'translateX(-2000px)';
+                });
+
+                secondColumnExperience.forEach(experience => {
+                    experience.style.transform = 'translateX(2000px)';
+                });
+            }else if(scroll >= 3300){
+                certificatesSubtitle.style.transform = 'translateY(-2000px)';
+
+                firstColumnExperience.forEach(experience => {
+                    experience.style.transform = 'translateX(-2000px)';
+                });
+
+                secondColumnExperience.forEach(experience => {
+                    experience.style.transform = 'translateX(2000px)';
+                });
+            }
 
         };
     
