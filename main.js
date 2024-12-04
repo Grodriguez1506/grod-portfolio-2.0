@@ -21,8 +21,8 @@ window.addEventListener('load', function(){
     var projectsCard = this.document.querySelector('.projects');
     var experiencesCard = this.document.querySelector('.experiences');
     var certificatesSubtitle = this.document.querySelector('.certificates .subtitulo')
-    var firstColumnExperience = this.document.querySelectorAll('.certificate_first_column');
-    var secondColumnExperience = this.document.querySelectorAll('.certificate_second_column');
+    var firstColumnCertificates = this.document.querySelectorAll('.certificate_first_column');
+    var secondColumnCertificates = this.document.querySelectorAll('.certificate_second_column');
 
     
     // FUNCION PARA ACTIVAR EL MODO OSCURO
@@ -188,35 +188,35 @@ window.addEventListener('load', function(){
                 experiencesCard.style.opacity = '0';
             };
 
-            if(scroll >= 2700 && scroll < 3300){
+            if(scroll >= 2700 && scroll < 3200){
                 certificatesSubtitle.style.transform = 'translateY(0px)';
 
-                firstColumnExperience.forEach(experience => {
-                    experience.style.transform = 'translateX(0px)';
+                firstColumnCertificates.forEach(certificate => {
+                    certificate.style.transform = 'translateX(0px)';
                 });
 
-                secondColumnExperience.forEach(experience => {
-                    experience.style.transform = 'translateX(0px)';
+                secondColumnCertificates.forEach(certificate => {
+                    certificate.style.transform = 'translateX(0px)';
                 });
             }else if(scroll <= 2700){
                 certificatesSubtitle.style.transform = 'translateY(-2000px)';
 
-                firstColumnExperience.forEach(experience => {
-                    experience.style.transform = 'translateX(-2000px)';
+                firstColumnCertificates.forEach(certificate => {
+                    certificate.style.transform = 'translateX(-2000px)';
                 });
 
-                secondColumnExperience.forEach(experience => {
-                    experience.style.transform = 'translateX(2000px)';
+                secondColumnCertificates.forEach(certificate => {
+                    certificate.style.transform = 'translateX(2000px)';
                 });
-            }else if(scroll >= 3300){
+            }else if(scroll >= 3200){
                 certificatesSubtitle.style.transform = 'translateY(-2000px)';
 
-                firstColumnExperience.forEach(experience => {
-                    experience.style.transform = 'translateX(-2000px)';
+                firstColumnCertificates.forEach(certificate => {
+                    certificate.style.transform = 'translateX(-2000px)';
                 });
 
-                secondColumnExperience.forEach(experience => {
-                    experience.style.transform = 'translateX(2000px)';
+                secondColumnCertificates.forEach(certificate => {
+                    certificate.style.transform = 'translateX(2000px)';
                 });
             }
 
