@@ -406,6 +406,7 @@ section{
 .datos_redes{
     flex-basis: 50%;
     height: 100%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -596,14 +597,18 @@ section{
     }
 }
 
-@media(max-width: 1095px) {
-
-    .individual_project {
-        flex-basis: 45%;
-    }
-
+@media(max-width: 1150px){
+    
     .datos_redes {
         flex-basis: 40%;
+    }
+    
+    #subtitulo_contact {
+        font-size: 56px;
+    }
+    
+    .datos_redes > .subtitulo {
+        font-size: 30px;
     }
 
     .profilepicture {
@@ -615,16 +620,16 @@ section{
         border-radius: 999px;
     }
 
-    #subtitulo_contact {
-        font-size: 56px;
-    }
-
     .bx {
         font-size: 40px;
     }
 
-    .datos_redes > .subtitulo {
-        font-size: 30px;
+}
+
+@media(max-width: 1095px) {
+
+    .individual_project {
+        flex-basis: 45%;
     }
     
 }
@@ -703,7 +708,7 @@ section{
 
 }
 
-@media(max-width: 770px) {
+@media(max-width: 775px) {
 
     .individual_project {
         flex-basis: 80%;
@@ -780,8 +785,13 @@ section{
     .loaders {
     flex-basis: 65%;
     }
+}
 
-
+@media(max-width: 495px){
+    
+    .datos_redes {
+        flex-basis: 90%;
+    }
 }
 
 @media(max-width: 440px ) {
