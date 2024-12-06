@@ -23,7 +23,39 @@ window.addEventListener('load', function(){
     var certificatesSubtitle = this.document.querySelector('.certificates .subtitulo')
     var firstColumnCertificates = this.document.querySelectorAll('.certificate_first_column');
     var secondColumnCertificates = this.document.querySelectorAll('.certificate_second_column');
+    var responsiveMenu = this.document.querySelector('#menu_responsive');
+    var burguerMenu = this.document.querySelector('#burger_menu');
+    var firstLineMenu = this.document.querySelector('.first_line');
+    var secondLineMenu = this.document.querySelector('.second_line');
+    var thirdLineMenu = this.document.querySelector('.third_line');
 
+    // EVENTO PARA DESPLEGAR EL MENÚ RESPONSIVE
+
+    function showMenu(){
+        burguerMenu.style.transform = 'translateX(133px)';
+        firstLineMenu.style.transform = 'translateY(14.5px) rotate(47deg)';
+        secondLineMenu.style.opacity = '0';
+        thirdLineMenu.style.transform = 'translateY(-12.5px) rotate(-48deg)';
+    }
+
+    function hideMenu(){
+        burguerMenu.style.transform = 'translateX(0px)';
+        firstLineMenu.style.transform = 'translateY(0px) rotate(0deg)';
+        secondLineMenu.style.opacity = '1';
+        thirdLineMenu.style.transform = 'translateY(0px) rotate(0deg)';
+    }
+
+    burguerMenu.addEventListener('click', () => {
+        var estadoMenu = responsiveMenu.className;
+
+        if(estadoMenu == 'hidden_menu'){
+            showMenu()
+            responsiveMenu.classList.replace('hidden_menu','expanded_menu');
+        }else{
+            hideMenu()
+            responsiveMenu.classList.replace('expanded_menu','hidden_menu');
+        };
+    });
     
     // FUNCION PARA ACTIVAR EL MODO OSCURO
 
@@ -188,7 +220,7 @@ window.addEventListener('load', function(){
                 experiencesCard.style.opacity = '0';
             };
 
-            if(scroll >= 2700 && scroll < 3200){
+            if(scroll >= 2670 && scroll < 3525){
                 certificatesSubtitle.style.transform = 'translateY(0px)';
 
                 firstColumnCertificates.forEach(certificate => {
@@ -198,7 +230,7 @@ window.addEventListener('load', function(){
                 secondColumnCertificates.forEach(certificate => {
                     certificate.style.transform = 'translateX(0px)';
                 });
-            }else if(scroll <= 2700){
+            }else if(scroll <= 2670){
                 certificatesSubtitle.style.transform = 'translateY(-2000px)';
 
                 firstColumnCertificates.forEach(certificate => {
@@ -208,7 +240,7 @@ window.addEventListener('load', function(){
                 secondColumnCertificates.forEach(certificate => {
                     certificate.style.transform = 'translateX(2000px)';
                 });
-            }else if(scroll >= 3200){
+            }else if(scroll >= 3526){
                 certificatesSubtitle.style.transform = 'translateY(-2000px)';
 
                 firstColumnCertificates.forEach(certificate => {
