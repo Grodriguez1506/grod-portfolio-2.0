@@ -145,7 +145,7 @@ ul > li > a:hover{
 }
 
 .expanded_menu{
-    box-shadow: 0px 0px 999px black;
+    box-shadow: 0px 0px 10px black;
     transform: translateX(0px);
 }
 
