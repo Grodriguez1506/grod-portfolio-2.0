@@ -33,16 +33,16 @@ window.addEventListener('load', function(){
 
     function showMenu(){
         burguerMenu.style.transform = 'translateX(133px)';
-        firstLineMenu.style.transform = 'translateY(14.5px) rotate(47deg)';
-        secondLineMenu.style.opacity = '0';
-        thirdLineMenu.style.transform = 'translateY(-12.5px) rotate(-48deg)';
+        // firstLineMenu.style.transform = 'translateY(14.5px) rotate(47deg)';
+        // secondLineMenu.style.opacity = '0';
+        // thirdLineMenu.style.transform = 'translateY(-12.5px) rotate(-48deg)';
     }
 
     function hideMenu(){
         burguerMenu.style.transform = 'translateX(0px)';
-        firstLineMenu.style.transform = 'translateY(0px) rotate(0deg)';
-        secondLineMenu.style.opacity = '1';
-        thirdLineMenu.style.transform = 'translateY(0px) rotate(0deg)';
+        // firstLineMenu.style.transform = 'translateY(0px) rotate(0deg)';
+        // secondLineMenu.style.opacity = '1';
+        // thirdLineMenu.style.transform = 'translateY(0px) rotate(0deg)';
     }
 
     burguerMenu.addEventListener('click', () => {
