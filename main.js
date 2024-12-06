@@ -109,11 +109,11 @@ window.addEventListener('load', function(){
             experiencesCard.style.opacity = '1';
 
             certificatesSubtitle.style.transform = 'translateY(0px)';
-            firstColumnExperience.forEach(experience => {
-                experience.style.transform = 'translateX(0px)';
+            firstColumnCertificates.forEach(certificate => {
+                certificate.style.transform = 'translateX(0px)';
             });
-            secondColumnExperience.forEach(experience => {
-                experience.style.transform = 'translateX(0px)';
+            secondColumnCertificates.forEach(certificate => {
+                certificate.style.transform = 'translateX(0px)';
             });
         }else{
             // EFECTO DE LOS NOMBRES DE LA TARJETA DE PRESENTACION, RESEÑA Y EL LOGO DEL ZORRO
