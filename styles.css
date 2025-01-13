@@ -330,32 +330,25 @@ section{
 
 
 .skills > .icons{
-    flex-basis: 20%;
+    flex-basis: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .skills > .icons > img{
-    width: 90px;
+    width: 10%;
     margin-bottom: 10px;
-    opacity: 0;
+    /* opacity: 0; */
     /* transition: all 2000ms; */
 }
 
-.loaders{
-    flex-basis: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.loaders > .skill-loading{
-    box-sizing: border-box;
-    width: 95%;
+.skill-loading{
+    flex-basis: 85%;
     height: 50px;
     border-radius: 10px;
     background-color: #ccc;
