@@ -343,8 +343,8 @@ section{
 .skills > .icons > img{
     width: 10%;
     margin-bottom: 10px;
-    /* opacity: 0; */
-    /* transition: all 2000ms; */
+    opacity: 0;
+    transition: all 2000ms;
 }
 
 .skill-loading{
