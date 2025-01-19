@@ -384,7 +384,7 @@ section{
 
 .individual_project{
     flex-basis: 30%;
-    height: 400px;
+    height: 420px;
     background-color: var(--colorTarjetasPrincipal);
     box-shadow: 0px 0px 8px #ccc;
     border-radius: 20px;
